@@ -25,13 +25,19 @@
 
     </p>
 
-    <p class="point">4. Obezite</p>
-      <p class="article">Çocuklarda artan obezite iyi belgelenmiştir. CDC'ye göre, Amerika gençliğinin %18,5'i artık “obez” olarak kabul ediliyor, birkaç on yıl önce sadece %5'ti. Obezitenin bir nedeni fiziksel aktivite eksikliğidir ve elektronik cihazları aşırı kullanan çocuklar fiziksel olarak daha az aktiftir. Oyun süresinin ruh halini iyileştirdiği ve benlik saygısını artırdığı gösterilmiş olsa da, hareketsiz faaliyetler (İnternet kullanımı gibi) yalnızca fiziksel aktivitenin azalmasına yol açmaz, aynı zamanda sosyal izolasyon ve depresyon duygularıyla bağlantılıdır.
+    <p class="point">6. Azalan İletişim ve Yakınlık</p>
+      <p class="article">Pew Research araştırmasına göre, evli çiftlerin %25'i aynı anda evde birbirlerine mesaj attığını itiraf ediyor. Ayrıca, çiftlerin %25'i birlikteyken cep telefonlarının eşlerinin veya partnerlerinin dikkatinin dağıldığını hissetti ve bu sayı daha genç yetişkinlerde (18 ila 29 yaş arası) %43'e çıkıyor. Çalışma, yetişkin İnternet kullanıcılarının %74'ünün İnternet'in evlilikleri veya birliktelikleri üzerinde olumlu bir etkisi olduğunu söylerken, %20'si İnternet etkisinin çoğunlukla olumsuz olduğunu söyledi.
       </p>
 
-      <p class="point">4. Obezite</p>
-        <p class="article">Çocuklarda artan obezite iyi belgelenmiştir. CDC'ye göre, Amerika gençliğinin %18,5'i artık “obez” olarak kabul ediliyor, birkaç on yıl önce sadece %5'ti. Obezitenin bir nedeni fiziksel aktivite eksikliğidir ve elektronik cihazları aşırı kullanan çocuklar fiziksel olarak daha az aktiftir. Oyun süresinin ruh halini iyileştirdiği ve benlik saygısını artırdığı gösterilmiş olsa da, hareketsiz faaliyetler (İnternet kullanımı gibi) yalnızca fiziksel aktivitenin azalmasına yol açmaz, aynı zamanda sosyal izolasyon ve depresyon duygularıyla bağlantılıdır.
-        </p>
+      <p class="point">7. Siber Zorbalık</p>
+        <apexchart style="max-width: 800px;" type="line" height="350" :options="chartOptions" :series="series"></apexchart>
+        <p class="article">Siber zorbalığın, bir başkasını incitmeyi veya utandırmayı amaçlayan mesajlar göndermek veya yayınlamak için İnternet, cep telefonları, video oyun sistemleri veya diğer teknolojilerin kullanılması olduğunu zaten biliyor olabilirsiniz. 2007 Pew Research araştırması, gençlerin %32'sinin siber zorbalığın kurbanı olduğunu ortaya çıkardı. Yaklaşık on yıl sonra, Siber Zorbalık Araştırma Merkezi tarafından 2016 yılında yapılan bir araştırma, bu sayıların neredeyse aynı olduğunu buldu. Ulusal Suç Önleme Konseyi, bu sayıyı %43 ile daha da yükseltiyor. NCPC ayrıca şunları da bildirir:</p>
+          <ul class="article">
+            <li>Gençlerin yaklaşık yüzde 20'si, sanal ortamda onları kandırmak veya kişisel bilgilerini vermelerini sağlamak için başka biri gibi davranan bir siber zorbaya maruz kaldı.</li>
+            <li>Gençlerin yüzde on yedisi, birisinin internette onlar hakkında yalan söylemesi nedeniyle mağdur oldu.</li>
+              <li>Gençlerin yüzde on üçü, bir siber zorbanın başka biriyle iletişim kurarken onlar gibi davrandığını öğrendi.</li>
+          </ul>
+        <p class="article">Yine de gençlerin yalnızca %11'i ebeveynleriyle siber zorbalık olayları hakkında konuşuyor.</p>
 </div>
 </template>
 
@@ -40,7 +46,39 @@ export default {
   name: 'HelloWorld',
   data(){
     return {
-      Title : "Teknoloji'nin Zararli Yonleri"
+      Title : "Teknoloji'nin Zararli Yonleri",
+      series: [{
+              name: "Siber Zorbalığa Uğrayanların Yüzdesel Oranı Yüzde",
+              data: [32,43]
+          }],
+          chartOptions: {
+            chart: {
+              height: 350,
+              type: 'line',
+              zoom: {
+                enabled: false
+              }
+            },
+            dataLabels: {
+              enabled: false
+            },
+            stroke: {
+              curve: 'straight'
+            },
+            title: {
+              text: 'Product Trends by Month',
+              align: 'left'
+            },
+            grid: {
+              row: {
+                colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                opacity: 0.5
+              },
+            },
+            xaxis: {
+              categories: [2007,2016],
+            }
+          },
     }
   }
 }
@@ -60,6 +98,7 @@ export default {
     font-family: accid;
     src: url("../assets/neuropolitical/accidental_presiden/accid___.ttf") format("opentype");
 }
+
 .title{
   font-size: 40px;
   text-align: left;
