@@ -38,6 +38,10 @@
               <li>Gençlerin yüzde on üçü, bir siber zorbanın başka biriyle iletişim kurarken onlar gibi davrandığını öğrendi.</li>
           </ul>
         <p class="article">Yine de gençlerin yalnızca %11'i ebeveynleriyle siber zorbalık olayları hakkında konuşuyor.</p>
+
+        <p class="point">8. Gizlilik Kaybı</p>
+          <p class="article">Birkaç tıklama ile herkes birinin Facebook sayfasını keşfedebilir ve iletişim bilgilerini, resimleri ve çok daha fazlasını toplayabilir. Bilgiler daha sonra bilgisayar korsanlığı ve virüsler için kullanılabilir. E-postası olan herkes, bilgisayar korsanlarının sürekli olarak insanların kredi kartı bilgilerini, sosyal güvenlik numaralarını vb. ifşa etmesini sağlamak için plan yaptığını bilir.
+          </p>
 </div>
 </template>
 
@@ -66,7 +70,7 @@ export default {
               curve: 'straight'
             },
             title: {
-              text: 'Product Trends by Month',
+              text: 'Yıla Göre Siber Zorbalık Oranları',
               align: 'left'
             },
             grid: {
