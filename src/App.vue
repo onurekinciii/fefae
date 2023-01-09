@@ -1,15 +1,11 @@
 <template>
-  <HelloWorld/>
+  <h1>Analizlere yardımıyla Sevim'in dünya'nın en güzel kızı olduğu tespit edilmiştir.</h1>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
