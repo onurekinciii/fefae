@@ -1,5 +1,5 @@
 <template>
-  <h1>error</h1>
+  <h1>https://exquisite-mooncake-9ef4cd.netlify.app/</h1>
 </template>
 
 <script>
